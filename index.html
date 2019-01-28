@@ -125,31 +125,31 @@
     <!-- GUIDE LIST -->
     <div class="container" style="margin-top: 40px;">
       <ul class="collapsible z-depth-0 guides" style="border: none;">
-        <li>
-          <div class="collapsible-header grey lighten-4">Guide title</div>
-          <div class="collapsible-body white">Lorem ipsum dolor sit amet.</div>
-        </li>
-        <li>
-          <div class="collapsible-header grey lighten-4">Guide title</div>
-          <div class="collapsible-body white">
-            <span>Lorem ipsum dolor sit amet.</span>
-          </div>
-        </li>
-        <li>
-          <div class="collapsible-header grey lighten-4">Guide title</div>
-          <div class="collapsible-body white">
-            <span>Lorem ipsum dolor sit amet.</span>
-          </div>
-        </li>
-        <li>
-          <div class="collapsible-header grey lighten-4">Guide title</div>
-          <div class="collapsible-body white">
-            <span>Lorem ipsum dolor sit amet.</span>
-          </div>
-        </li>
       </ul>
     </div>
 
+<script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-auth.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyA0WNR3fR_sKRv9u7mlGGpL-DEcmIi3lrw",
+    authDomain: "ninja-firebase-auth.firebaseapp.com",
+    databaseURL: "https://ninja-firebase-auth.firebaseio.com",
+    projectId: "ninja-firebase-auth",
+  };
+  firebase.initializeApp(config);
+
+  // make auth and firestore reference
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+
+  // update firestore settings
+  db.settings({
+    timestampsInSnapshots: true
+  });
+</script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="scripts/auth.js"></script>
